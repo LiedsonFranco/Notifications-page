@@ -80,8 +80,8 @@ a:hover{
 p{
     color: var(--grayish-blue);
 }
-.notification::after{
-    content: attr();
+.unread .notification-text::after{
+    content: '🔴';
 }
 .text{
     padding: 10px;
