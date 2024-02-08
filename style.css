@@ -1,0 +1,122 @@
+@font-face {
+    font-family: Plus-Jakarta-Sans;
+    src: url(assets/fonts/PlusJakartaSans-VariableFont_wght.ttf);
+}
+:root{
+    --blue: hsl(219, 85%, 26%);
+    --red: hsl(1, 90%, 64%);
+    --very-light-grayish-blue: hsl(210, 60%, 98%);
+    --light-grayish-blue-1: hsl(211, 68%, 94%);
+    --light-grayish-blue-2: hsl(205, 33%, 90%);
+    --grayish-blue: hsl(219, 14%, 63%);
+    --dark-grayish-blue: hsl(219, 12%, 42%);
+    --very-dark-grayish-blue: hsl(224, 21%, 14%);
+}
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-family: Plus-Jakarta-Sans, sans-serif;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    margin: 25px 0;
+}
+.header button{
+    border: none;
+    background-color: transparent;
+    transition: .3s;
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+.header button:hover {
+    color: var(--blue);
+}
+main{
+    width: 95%;
+    margin: auto;
+    margin: auto;
+}
+.notifications-number{
+    padding: 3px 12px;
+    background-color: var(--blue);
+    color: white;
+    border-radius: 3px;
+}
+.notification{
+    display: flex;
+    margin: 10px 0px;
+    padding: 20px;
+    position: relative;
+}
+.notification .profile-picture{
+    width: 60px;
+    margin-right: 20px;
+    display: inline-block;
+}
+.profile-picture img{
+    width: inherit;
+}
+.person-name{
+    font-weight: 800;
+}
+a{
+    font-weight: 500;
+    color: var(--very-dark-grayish-blue);
+    text-decoration: none;
+    transition: .3s;
+}
+a:hover{
+    color: var(--blue);
+}
+
+.unread{
+    background-color: var(--light-grayish-blue-1);
+    border-radius: 10px;
+}
+p{
+    color: var(--grayish-blue);
+}
+.notification::after{
+    content: attr();
+}
+.text{
+    padding: 10px;
+    display: inline-block;
+}
+.message-text{
+    padding: 20px;
+    border: 1px solid var(--light-grayish-blue-1);
+    margin-top: 20px;
+    transition: .5s;
+}
+.message-text:hover{
+    background-color: var(--light-grayish-blue-2);
+    color: var(--very-dark-grayish-blue);
+    cursor: pointer;
+}
+
+@media only screen and (min-width: 768px) {
+    body{
+        height: 97vh;
+        background-color: var(--light-grayish-blue-1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+    }
+    main{
+        max-width: 800px;
+        height: min-content;
+        background-color: white;
+        padding: 30px;
+        border-radius: 10px;
+    }
+    .posted-photo{
+        position: absolute;
+        right: 0;
+    }
+}
